@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffcc80, #895bd8);
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.top-left, .top-right {
+    position: absolute;
+    top: 10px;
+    font-size: 14px;
+}
+
+.top-left {
+    left: 10px;
+    font-weight: bold;
+}
+
+.top-right {
+    right: 10px;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+main {
+    text-align: center;
+    padding: 20px 40px;
+}
+main p {
+    margin: 20px 0;
+    text-align: left;
+}
+
+main .fox {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.icon {
+    width: 120px;
+    animation:autoRotateAnimation;
+    animation-timeline: view();
+}
+@keyframes autoRotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+h2 {
+    font-size: 68px;
+    margin: 10px 0;
+}
+.auto-show {
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
+}
+@keyframes autoShowAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+section {
+    margin: 40px 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 300px;
+    background-color: rgba(234, 182, 117, 0.3);
+}
+
+section p {
+    margin: 20px 0;
+}
+
+.cat-container, .dog-container {
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; /* Center the items horizontally */
+}
+
+.img, .text {
+    flex: 1; /* Each child takes up equal space */
+    padding: 40px; /* Apply 40px padding inside each */
+}
+
+.img img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit:contain; /* Cover the area without losing aspect ratio */
+}
+
+.big-text span {
+    display:block;
+    text-align: center;
+    font-size: 96px;
+    margin: 0 20px 20px 20px;
+
+}
+
+.big-text span:nth-child(1) {
+    margin-left: 1em;
+}
+
+.big-text span:nth-child(2) {
+    margin-left: 0;
+}
+
+.big-text span:nth-child(3) {
+    margin-left: 3em;
+}
+
+.big-text span:nth-child(4) {
+    margin-left: 1em;
+}
+
+.auto-blur{
+    animation: autoBlurAnimation linear both;
+    animation-timeline: view();
+}
+@keyframes autoBlurAnimation {
+    0%{
+        filter: blur(40px);
+    }
+    45%, 55%{
+        filter: blur(0px);
+    }
+    100% {
+        filter: blur(40px);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    padding-bottom: 200px;
+}
